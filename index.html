@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>OOPS</h1>
+</body>
+</html>
+
+<script>
+
+    //  1st question
+   class family 
+   {
+    constructor(c,g,a)
+    {
+        this.city = c;
+        this.gender = g;
+        this.age = a;
+    }
+   }
+   class son extends family
+   {
+       constructor(c,g,a,n)
+       {
+       super(c,g,a)
+       this.name = n
+       }
+   }
+   class uncle extends family 
+   {
+    constructor(c,g,a,n)
+       {
+       super(c,g,a)
+       this.name = n
+       }
+
+   }
+
+ let fam = new son ("Delhi", "Male", "40", "Ajay")
+ let fam1 = new uncle("Pune","male", "35", "rahul")
+ console.log(fam1)
+
+
+//    1b
+
+ class Cat {
+    constructor() {
+        this.tail = true;
+        this.fur = true;
+        this.legs = 4;
+        
+    }
+}
+
+class Lion extends Cat {
+    constructor(s, c,l ) {
+        super();
+        this.lifespan = l
+        this.speed = s;
+        this.colour = c;
+    }
+}
+
+class Tiger extends Cat {
+    constructor(s, c,l ) {
+        super();
+        this.lifespan = l
+        this.speed = s;
+        this.colour = c;
+    }
+}
+
+let jungle = new Lion('120km/h', 'brown', "12yr");
+console.log(jungle);
+
+
+// -------->
+// 2nd question 
+
+class User {
+    constructor(n,r)
+    {
+        // this.name=n
+        var cardno;
+        var pin;
+
+    }
+
+    getcardno() 
+    { return this.cardno}
+
+    setcardno(value)
+    {
+        this.cardno =value;
+    }
+    getpin()
+    {
+        return this.pin;
+    }
+    setpin(value)
+    {
+        this.pin = value;
+    }
+}
+
+let e1 = new User();
+e1.setcardno("99999999")
+e1.setpin("10")
+console.log(e1.getcardno());
+console.log(e1.getpin());
+
+
+
+
+
+
+
+
+//  3rd question
+
+
+class cricketer {
+        constructor(n,s) {
+            this.name = n
+            this.country = s
+            this.shot = []
+        }
+        learnskill(shot) {
+            this.shot.push(shot)
+        }
+    }
+
+    let player = new cricketer("virat", "india")
+    player.learnskill("cover drive")
+    player.learnskill("hook")
+    console.log(player)
+
+
+
+    //  4th question Implement an example of your own to show Polymorphism.
+
+class game {
+        run() {
+            console.log("I love sports")
+        }
+    }
+
+    class cricket extends game {
+        run() {
+            console.log("i love cricket")
+        }
+    }
+
+    class football extends game {
+         
+            // console.log("i love football")
+        
+    }
+
+    let a = new game()
+    let b = new cricket()
+    let c = new football()
+
+    c.run()
+
+
+</script>
